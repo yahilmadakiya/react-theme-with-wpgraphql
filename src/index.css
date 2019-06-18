@@ -1,5 +1,6 @@
 body {
 	font-family: "Courier New", Courier, monospace;
+	color: #373a3c;
 }
 
 .container {
@@ -7,34 +8,31 @@ body {
 	margin: auto;
 }
 
+a {
+	color: #373a3c;
+	transition: color 0.3s;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #000;
+}
+
 .site-header {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .site-header h1 a {
 	font-size: 60px;
-	color: #000;
-	text-decoration: none;
 	font-weight: bold;
-}
-
-.site-header h1 a:hover,
-.site-header h1 a:focus {
-	text-decoration: underline;
 }
 
 .site-header nav a {
-	color: #000;
-	text-decoration: none;
 	margin: 0 10px;
 	font-weight: bold;
-}
-
-.site-header nav a:hover,
-.site-header nav a:focus {
-	text-decoration: underline;
 }
 
 .post-listing {
@@ -45,6 +43,23 @@ body {
 
 .post-listing img {
 	width: 100%;
+	margin-bottom: 16px;
+}
+
+.post-title {
+	margin: 0;
+}
+.category-listing {
+	display: flex;
+	margin-bottom: 8px;
+}
+
+.category-listing a {
+	font-size: 14px;
+}
+
+.category-listing a + a {
+	margin-left: 8px;
 }
 
 .post-listing-first-large div:first-child {

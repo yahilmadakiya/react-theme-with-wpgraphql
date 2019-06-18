@@ -1,15 +1,16 @@
 import React from "react";
+import { Router } from "@reach/router";
 
-// Components
-import Header from "./components/Header";
-import Posts from "./components/Posts";
+// Import Layouts
+import Home from "./layout/Home";
+import About from "./layout/About";
 
 function App() {
 	return (
-		<React.Fragment>
-			<Header />
-			<Posts />
-		</React.Fragment>
+		<Router>
+			<Home path="/" />
+			<About path="/about" />
+		</Router>
 	);
 }
 

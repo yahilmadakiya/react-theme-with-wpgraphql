@@ -17,10 +17,16 @@ const Posts = props => {
 
 					return (
 						<div key={post.id}>
-							<img src={post.featuredImage.sourceUrl} />
+							<a href="#">
+								<img
+									alt={post.featuredImage.title}
+									src={post.featuredImage.sourceUrl}
+									srcSet={post.featuredImage.srcSet}
+								/>
+							</a>
 
 							{post.categories.nodes && (
-								<div className="post-category">
+								<div className="category-listing">
 									{post.categories.nodes.map(category => {
 										return (
 											<a
@@ -34,8 +40,12 @@ const Posts = props => {
 								</div>
 							)}
 
-							<h2>{post.title}</h2>
-							<span>{post.author.name}</span>
+							<h2 className="post-title">
+								<a href="#">{post.title}</a>
+							</h2>
+							<span className="post-author">
+								By: <a href="#">{post.author.name}</a>
+							</span>
 						</div>
 					);
 				})}
@@ -48,7 +58,7 @@ const Posts = props => {
 
 export default graphql(gql`
 	{
-		posts(first: 10) {
+		posts(first: 11) {
 			pageInfo {
 				hasNextPage
 				endCursor
@@ -58,9 +68,12 @@ export default graphql(gql`
 				post: node {
 					id
 					title
+					link
 					date
 					featuredImage {
+						title
 						sourceUrl
+						srcSet
 					}
 					categories {
 						nodes {
