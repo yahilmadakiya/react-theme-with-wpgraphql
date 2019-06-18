@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 import { graphql } from "react-apollo";
 import { gql } from "apollo-boost";
 
@@ -17,13 +18,13 @@ const Posts = props => {
 
 					return (
 						<div key={post.id}>
-							<a href="#">
+							<Link to={`/article/${post.id}`}>
 								<img
 									alt={post.featuredImage.title}
 									src={post.featuredImage.sourceUrl}
 									srcSet={post.featuredImage.srcSet}
 								/>
-							</a>
+							</Link>
 
 							{post.categories.nodes && (
 								<div className="category-listing">
