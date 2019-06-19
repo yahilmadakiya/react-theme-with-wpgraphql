@@ -6,6 +6,7 @@ import Home from "./layout/Home";
 import About from "./layout/About";
 import Articles from "./layout/Articles";
 import Article from "./layout/Article";
+import NotFound from "./layout/NotFound";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<About path="/about" />
 			<Articles path="/articles/" />
 			<Article path="/article/:id" />
+			<NotFound default />
 		</Router>
 	);
 }
