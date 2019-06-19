@@ -1,8 +1,8 @@
 import React from "react";
 
 // Import Components
-import Header from "../components/Header";
-import Posts from "../components/Posts";
+import Header from "../components/Header/Header";
+import Posts from "../components/Posts/Posts";
 
 const Home = () => {
 	return (

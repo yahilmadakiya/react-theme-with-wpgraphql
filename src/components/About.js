@@ -1,15 +1,15 @@
 import React from "react";
 
 // Import Components
-import Header from "../components/Header";
+import Header from "./Header/Header";
 
-const Articles = () => {
+const About = () => {
 	return (
 		<React.Fragment>
 			<Header />
-			<p>Article Page</p>
+			<p>About Page</p>
 		</React.Fragment>
 	);
 };
 
-export default Articles;
+export default About;

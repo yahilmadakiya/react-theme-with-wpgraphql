@@ -2,11 +2,11 @@ import React from "react";
 import { Router } from "@reach/router";
 
 // Import Layouts
-import Home from "./layout/Home";
-import About from "./layout/About";
-import Articles from "./layout/Articles";
-import Article from "./layout/Article";
-import NotFound from "./layout/NotFound";
+import Home from "./components/Home";
+import About from "./components/About";
+import Articles from "./components/Articles";
+import Article from "./components/Article";
+import NotFound from "./components/NotFound";
 
 function App() {
 	return (
