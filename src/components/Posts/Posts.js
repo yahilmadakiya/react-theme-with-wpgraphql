@@ -18,7 +18,7 @@ const Posts = props => {
 
 					return (
 						<div key={post.id}>
-							<Link to={`/article/${post.id}`}>
+							<Link to={`/article/${post.slug}`}>
 								<img
 									alt={post.featuredImage.title}
 									src={post.featuredImage.sourceUrl}
@@ -69,6 +69,7 @@ export default graphql(gql`
 				post: node {
 					id
 					title
+					slug
 					link
 					date
 					featuredImage {

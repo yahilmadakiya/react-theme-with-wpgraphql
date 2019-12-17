@@ -14,7 +14,7 @@ function App() {
 			<Home path="/" />
 			<About path="/about" />
 			<Articles path="/articles/" />
-			<Article path="/article/:id" />
+			<Article path="/article/:slug" />
 			<NotFound default />
 		</Router>
 	);
