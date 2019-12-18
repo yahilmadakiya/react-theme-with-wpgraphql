@@ -2,32 +2,31 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { gql } from 'apollo-boost';
 
-class SinglePost extends Component {
+const SinglePost = ( props ) => {
 
-	render() {
-		const data = this.props.data;
+	const loading = props.data.loading;
+	const post = props.data.postBy;
 
-		if (data.loading) {
-			return (<p>Loading...</p>);
-		}
-
-
-		return (
-			<article className="article">
-				<img
-					className="article-image"
-					alt={data.postBy.featuredImage.title}
-					src={data.postBy.featuredImage.sourceUrl}
-					srcSet={data.postBy.featuredImage.srcSet}
-				/>
-				<div className="container">
-					<h1 className="article-title">{data.postBy.title}</h1>
-					<div dangerouslySetInnerHTML={{ __html: data.postBy.content}}></div>
-				</div>
-			</article>
-		);
+	if (loading) {
+		return (<p>Loading...</p>);
 	}
+
+	return (
+		<article className="article">
+			<img
+				className="article-image"
+				alt={post.featuredImage.title}
+				src={post.featuredImage.sourceUrl}
+				srcSet={post.featuredImage.srcSet}
+			/>
+			<div className="container">
+				<h1 className="article-title">{post.title}</h1>
+				<div dangerouslySetInnerHTML={{ __html: post.content}}></div>
+			</div>
+		</article>
+	);
 }
+
 
 const getPostBySlug = gql`
 	query MyQuery( $slug: String ) {
