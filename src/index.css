@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|DM+Sans:400,700&display=swap');
 
 /* normalize.css */
 /* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -453,10 +453,12 @@ a img.aligncenter {
 
 /* Theme style */
 body {
-	font-family: "Courier New", Courier, monospace;
-	color: #373a3c;
+	font-family: 'DM Sans', sans-serif;
+	color: #000;
 	padding: 0;
 	margin: 0;
+	font-size: 20px;
+	line-height: 1.5;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -472,9 +474,11 @@ img {
 	margin: auto;
 }
 
+.unstyle-link {
+	color: inherit;
+}
+
 a {
-	color: #373a3c;
-	transition: color 0.3s;
 	text-decoration: none;
 }
 
@@ -487,6 +491,7 @@ a:focus {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
 }
 
 .site-header h1 a {
@@ -495,8 +500,11 @@ a:focus {
 }
 
 .site-header nav a {
-	margin: 0 10px;
 	font-weight: bold;
+}
+
+.site-header nav a + a {
+	margin-left: 32px;
 }
 
 .post-listing {
@@ -516,13 +524,20 @@ a:focus {
 .post-listing-title {
 	margin: 0;
 }
-.category-listing {
-	display: flex;
-	margin-bottom: 8px;
+
+.post-listing-excerpt p {
+	margin-top: 0px;
+	margin-bottom: 5px;
 }
 
+.category-listing {
+	display: flex;
+}
+
+.post-listing-author,
 .category-listing a {
 	font-size: 14px;
+	text-transform: capitalize;
 }
 
 .category-listing a + a {
@@ -530,11 +545,16 @@ a:focus {
 }
 
 /* Single page style */
+.article {
+	border-top: 1px solid rgba(227, 232, 231, 0.98);
+}
+
 .article-image {
 	width: 100%;
 }
 
 .article-title {
-	font-size: 40px;
+	font-size: 60px;
 	font-weight: bold;
+	text-align: center;
 }

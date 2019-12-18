@@ -6,12 +6,12 @@ const Header = () => {
 		<header className="site-header-wrapper">
 			<div className="site-header container">
 				<h1>
-					<a href="/">Y`ahil</a>
+					<a className="unstyle-link" href="/">Y`ahil</a>
 				</h1>
 				<nav>
-					<Link to="/">01 Home</Link>
-					<Link to="/about/">02 About</Link>
-					<Link to="/articles/">03 Articles</Link>
+					<Link className="unstyle-link" to="/">Home</Link>
+					<Link className="unstyle-link" to="/about/">About</Link>
+					<Link className="unstyle-link" to="/articles/">Articles</Link>
 				</nav>
 			</div>
 		</header>

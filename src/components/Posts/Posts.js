@@ -43,9 +43,16 @@ const Posts = props => {
 							)}
 
 							<h2 className="post-listing-title">
-								<a href="#">{post.title}</a>
+								<Link
+									className="unstyle-link"
+									to={`/article/${post.slug}`}>
+										{post.title}
+								</Link>
 							</h2>
-							<span className="post-author">
+
+							<div className="post-listing-excerpt" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+
+							<span className="post-listing-author">
 								By: <a href="#">{post.author.name}</a>
 							</span>
 						</div>

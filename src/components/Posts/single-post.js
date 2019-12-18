@@ -13,6 +13,9 @@ const SinglePost = ( props ) => {
 
 	return (
 		<article className="article">
+			<div className="container">
+				<h1 className="article-title">{post.title}</h1>
+			</div>
 			<img
 				className="article-image"
 				alt={post.featuredImage.title}
@@ -20,7 +23,6 @@ const SinglePost = ( props ) => {
 				srcSet={post.featuredImage.srcSet}
 			/>
 			<div className="container">
-				<h1 className="article-title">{post.title}</h1>
 				<div dangerouslySetInnerHTML={{ __html: post.content}}></div>
 			</div>
 		</article>
