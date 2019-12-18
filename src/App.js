@@ -8,7 +8,7 @@ import Articles from "./components/Articles";
 import Article from "./components/Article";
 import NotFound from "./components/NotFound";
 
-function App() {
+const App = () => {
 	return (
 		<Router>
 			<Home path="/" />
