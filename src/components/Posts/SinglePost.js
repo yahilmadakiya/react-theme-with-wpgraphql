@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { graphql } from 'react-apollo';
 import { gql } from 'apollo-boost';
+
+import Loading from './../../components/Loading'
 
 const SinglePost = ( props ) => {
 
@@ -8,7 +10,7 @@ const SinglePost = ( props ) => {
 	const post = props.data.postBy;
 
 	if (loading) {
-		return (<p>Loading...</p>);
+		return <Loading />;
 	}
 
 	return (
