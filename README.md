@@ -33,7 +33,6 @@ const config = {
 
 * `npm run start` Runs the node server in development mode
 
-
 ## License :page_with_curl:
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
