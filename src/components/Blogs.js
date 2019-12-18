@@ -2,14 +2,15 @@ import React from "react";
 
 // Import Components
 import Header from "./Header/Header";
+import Posts from "./Posts/Posts";
 
-const Articles = () => {
+const Blogs = () => {
 	return (
 		<React.Fragment>
 			<Header />
-			<p>Article Page</p>
+			<Posts />
 		</React.Fragment>
 	);
 };
 
-export default Articles;
+export default Blogs;

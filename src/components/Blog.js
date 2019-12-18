@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import Header from './Header/Header';
 import SinglePost from './Posts/single-post'
 
-const Article = ( props ) => {
+const Blog = ( props ) => {
 
 	return (
 		<React.Fragment>
@@ -12,4 +12,4 @@ const Article = ( props ) => {
 	);
 }
 
-export default Article;
+export default Blog;

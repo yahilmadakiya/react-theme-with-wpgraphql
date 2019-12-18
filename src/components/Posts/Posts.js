@@ -19,7 +19,7 @@ const Posts = props => {
 					return (
 						// TODO: Move this to component called c-card
 						<div key={post.id}>
-							<Link to={`/article/${post.slug}`}>
+							<Link to={`/blog/${post.slug}`}>
 								<img
 									alt={post.featuredImage.title}
 									src={post.featuredImage.sourceUrl}
@@ -45,7 +45,7 @@ const Posts = props => {
 							<h2 className="post-listing-title">
 								<Link
 									className="unstyle-link"
-									to={`/article/${post.slug}`}>
+									to={`/blog/${post.slug}`}>
 										{post.title}
 								</Link>
 							</h2>
