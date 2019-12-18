@@ -17,6 +17,7 @@ const Posts = props => {
 					const { post } = item;
 
 					return (
+						// TODO: Move this to component called c-card
 						<div key={post.id}>
 							<Link to={`/article/${post.slug}`}>
 								<img
@@ -41,7 +42,7 @@ const Posts = props => {
 								</div>
 							)}
 
-							<h2 className="post-title">
+							<h2 className="post-listing-title">
 								<a href="#">{post.title}</a>
 							</h2>
 							<span className="post-author">
@@ -72,6 +73,7 @@ const getPosts = gql`
 					slug
 					link
 					date
+					excerpt
 					featuredImage {
 						title
 						sourceUrl
