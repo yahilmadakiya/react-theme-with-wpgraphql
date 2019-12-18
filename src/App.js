@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import Authors from "./pages/Authors";
 
 const App = () => {
 	return (
@@ -15,6 +16,7 @@ const App = () => {
 			<About path="/about" />
 			<Blogs path="/blog/" />
 			<Blog path="/blog/:slug" />
+			<Authors path="/authors/" />
 			<NotFound default />
 		</Router>
 	);
