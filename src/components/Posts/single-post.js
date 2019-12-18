@@ -4,7 +4,6 @@ import { gql } from 'apollo-boost';
 
 class SinglePost extends Component {
 
-
     render() {
         const data = this.props.data;
 
