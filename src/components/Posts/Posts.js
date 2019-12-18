@@ -17,8 +17,9 @@ const Posts = props => {
 					const { post } = item;
 
 					return (
+						// TODO: Move this to component called c-card
 						<div key={post.id}>
-							<Link to={`/article/${post.slug}`}>
+							<Link to={`/blog/${post.slug}`}>
 								<img
 									alt={post.featuredImage.title}
 									src={post.featuredImage.sourceUrl}
@@ -41,10 +42,17 @@ const Posts = props => {
 								</div>
 							)}
 
-							<h2 className="post-title">
-								<a href="#">{post.title}</a>
+							<h2 className="post-listing-title">
+								<Link
+									className="unstyle-link"
+									to={`/blog/${post.slug}`}>
+										{post.title}
+								</Link>
 							</h2>
-							<span className="post-author">
+
+							<div className="post-listing-excerpt" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+
+							<span className="post-listing-author">
 								By: <a href="#">{post.author.name}</a>
 							</span>
 						</div>
@@ -57,7 +65,7 @@ const Posts = props => {
 	return <div>No Posts</div>;
 };
 
-export default graphql(gql`
+const getPosts = gql`
 	{
 		posts(first: 11) {
 			pageInfo {
@@ -72,6 +80,7 @@ export default graphql(gql`
 					slug
 					link
 					date
+					excerpt
 					featuredImage {
 						title
 						sourceUrl
@@ -90,4 +99,6 @@ export default graphql(gql`
 			}
 		}
 	}
-`)(Posts);
+`;
+
+export default graphql(getPosts)(Posts);
