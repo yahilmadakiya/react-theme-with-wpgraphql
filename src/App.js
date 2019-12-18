@@ -8,6 +8,7 @@ import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import Authors from "./pages/Authors";
+import Author from './pages/Author'
 
 const App = () => {
 	return (
@@ -16,7 +17,8 @@ const App = () => {
 			<About path="/about" />
 			<Blogs path="/blog/" />
 			<Blog path="/blog/:slug" />
-			<Authors path="/authors/" />
+			<Authors path="/author/" />
+			<Author path="/author/:id" />
 			<NotFound default />
 		</Router>
 	);
