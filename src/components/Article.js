@@ -4,12 +4,12 @@ import SinglePost from './Posts/single-post'
 
 const Article = ( props ) => {
 
-    return (
-        <React.Fragment>
-            <Header />
-            <SinglePost slug={props.slug}/>
-        </React.Fragment>
-    );
+	return (
+		<React.Fragment>
+			<Header />
+			<SinglePost slug={props.slug}/>
+		</React.Fragment>
+	);
 }
 
 export default Article;

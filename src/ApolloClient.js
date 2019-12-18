@@ -3,7 +3,7 @@ import config from './client-config';
 
 // apollo client setup
 const client = new ApolloClient({
-    uri: config.graphqlUrl
+	uri: config.graphqlUrl
 });
 
 export default client;
