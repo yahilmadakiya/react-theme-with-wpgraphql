@@ -57,7 +57,7 @@ const Posts = props => {
 	return <div>No Posts</div>;
 };
 
-export default graphql(gql`
+const getPosts = gql`
 	{
 		posts(first: 11) {
 			pageInfo {
@@ -90,4 +90,6 @@ export default graphql(gql`
 			}
 		}
 	}
-`)(Posts);
+`;
+
+export default graphql(getPosts)(Posts);
