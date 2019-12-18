@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
-import Header from './Header/Header';
-import SinglePost from './Posts/single-post'
+import Header from '../components/Header/Header';
+import SinglePost from '../components/Posts/single-post'
 
 const Blog = ( props ) => {
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Import Components
-import Header from "./Header/Header";
+import Header from "../components/Header/Header";
 
 const About = () => {
 	return (

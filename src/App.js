@@ -2,11 +2,11 @@ import React from "react";
 import { Router } from "@reach/router";
 
 // Import Layouts
-import Home from "./components/Home";
-import About from "./components/About";
-import Blogs from "./components/Blogs";
-import Blog from "./components/Blog";
-import NotFound from "./components/NotFound";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Blogs from "./pages/Blogs";
+import Blog from "./pages/Blog";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
 	return (
