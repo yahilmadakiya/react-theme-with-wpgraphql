@@ -7,6 +7,10 @@ import Card from "./../posts/Card";
 
 const SingleAuthor = (props) => {
 
+	console.log(props);
+
+	if (!props.data ) return false;
+
 	const loading = props.data.loading;
 	const user = props.data.user;
 
@@ -16,7 +20,7 @@ const SingleAuthor = (props) => {
 
 	return(
 		<div className="container">
-			{user.name}
+			<h2>{user.name}</h2>
 
 			<div className="post-listing post-listing-first-large">
 				{user.posts.items.map(item => {
@@ -30,34 +34,34 @@ const SingleAuthor = (props) => {
 }
 
 const getAuthor = gql`
-{
-  user(id: "dXNlcjox") {
-	name
-	posts {
-	  items: edges {
-		post: node {
-		  id
-		  title
-		  slug
-		  link
-		  date
-		  excerpt
-		  featuredImage {
-			title
-			sourceUrl
-			srcSet
-		  }
-		  categories {
-						nodes {
-							categoryId
-							name
+	query MyQuery( $id: ID! ) {
+		user(id: $id) {
+			name
+			posts {
+				items: edges {
+					post: node {
+						id
+						title
+						slug
+						link
+						date
+						excerpt
+						featuredImage {
+							title
+							sourceUrl
+							srcSet
+						}
+						categories {
+							nodes {
+								categoryId
+								name
+							}
 						}
 					}
+				}
+			}
 		}
-	  }
 	}
-  }
-}
 `;
 
 export default graphql( getAuthor, {

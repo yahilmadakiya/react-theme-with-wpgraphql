@@ -22,7 +22,7 @@ const AuthorList = ( props ) => {
 
 						return(
 							<div key={index}>
-								<Link to={`/author/${user.slug}`}>
+								<Link to={`/author/${user.id}`}>
 									{user.name}
 								</Link>
 							</div>
@@ -40,6 +40,7 @@ query MyQuery {
   users {
 	items: edges {
 	  user: node {
+		id
 		name
 		slug
 		description
