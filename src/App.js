@@ -10,6 +10,9 @@ import NotFound from "./pages/NotFound";
 import Authors from "./pages/Authors";
 import Author from './pages/Author'
 
+// TODO: We can have author slug in url once userby slug available in wp-graphql.
+// Ref: https://github.com/wp-graphql/wp-graphql/issues/263
+
 const App = () => {
 	return (
 		<Router>
